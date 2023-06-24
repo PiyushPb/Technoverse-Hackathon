@@ -13,7 +13,7 @@
             <div class="home_content">
                 <h2>Services on demand</h2>
                 <p>Get your services done at your doorstep</p>
-                <form method="GET">
+                <form method="GET" autocomplete = "off">
                     <input type="text" id="searchInput" placeholder="Search for services" oninput="showServices(this.value)">
                     <button type="submit">Search</button>
                 </form>
