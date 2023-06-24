@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.home_bg {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background-image: url(../assets/homebg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home_bg_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.16),
+    rgba(0, 0, 0, 0.562)
+  );
+}
+
+.home_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home_content h2 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 4px 4px 8px #00000063;
+}
+
+.home_content p {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.home_content form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.home_content form input {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid #fff;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none !important;
+}
+
+.home_content form button {
+  width: 20%;
+  height: 3rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#servicesDropdown {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+#servicesDropdown div {
+  padding: 1rem;
+  cursor: pointer;
+}
