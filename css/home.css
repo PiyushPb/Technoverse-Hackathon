@@ -148,13 +148,139 @@ body {
 }
 
 .service_card:hover {
-  box-shadow: 1px 1px 50px #00000062;
+  box-shadow: 1px 1px 50px #0000002a;
+  cursor: pointer;
 }
 
 .services_container h2,
-p {
+.services_container p {
   display: none;
 }
+
+/* ------------ popuolar services --------------- */
+
+.popular_services{
+  width: 80%;
+  margin: auto;
+}
+
+.popular_services h2{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.popular_services p{
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+
+.popular_service_container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular_service_card{
+  position: relative;
+  height: 300px;
+  width: 220px;
+  border-radius: 4px;
+  margin: 1rem;
+}
+
+.popular_service_card:nth-child(1){
+  margin-left: 0;
+}
+
+.popular_service_card:nth-child(5){
+  margin-right: 0;
+}
+
+
+.popular_service_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popular_service_card_content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;;
+}
+
+.popular_service_card_content h2{
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.popular_service_card_content h4{
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* -------------------- referral code ------------------------ */
+
+.referral_container{
+  position: relative;
+  width: 100%;
+  background-color: #0d084d;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2.5rem;
+}
+
+.referral_content{
+  width: 50%;
+  margin: auto;
+  padding: 0 4rem;
+}
+
+.referral_content h2{
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.referral_content p{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.referral_content button{
+  padding: 10px 20px;
+    background: #00cd6e;
+    color: #fff;
+    border-radius: 4px
+}
+
+.referral_img_container{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media screen and (max-width: 768px) {
   .home_bg {
@@ -212,5 +338,81 @@ p {
     font-size: 1rem;
     font-weight: 300;
     margin-bottom: 1rem;
+  }
+
+  .popular_services{
+    width: 100%;
+    padding: 20px;
+  }
+
+  .popular_service_container{
+    justify-content: center;
+  }
+
+  .popular_service_card{
+    width: 80%;
+    height: 300px;
+    margin: 1rem 0;
+  }
+
+  .popular_service_card:nth-child(1){
+    margin-left: 0;
+  }
+
+  .popular_service_card:nth-child(5){
+    margin-right: 0;
+  }
+
+  .popular_service_card_content h2{
+    font-size: 1.2rem;
+  }
+
+  .popular_service_card_content h4{
+    font-size: 0.8rem;
+  }
+
+  .referral_container{
+    flex-direction: column;
+  }
+
+  .referral_content{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .referral_img_container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .referral_img_container img{
+    width: 90%;
+  }
+
+  .referral_content button{
+    width: 80%;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    margin-bottom: 3rem;
+  }
+
+  .referral_content h2{
+    font-size: 1.5rem;
+  }
+
+  .referral_content p{
+    font-size: 1rem;
+  }
+
+  .referral_content button{
+    padding: 10px 20px;
+    background: #00cd6e;
+    color: #fff;
+    border-radius: 4px
   }
 }

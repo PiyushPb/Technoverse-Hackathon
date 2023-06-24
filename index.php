@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+    <?php include 'navbar.html';?>
         <div class="home_bg">
             <div class="home_bg_overlay"></div>
             <div class="home_content">
@@ -97,8 +98,68 @@
             </div>
             </div>  
         </div>
-        
         </div>
+
+        <div class="popular_services">
+            <h2>Popular Services</h2>
+            <p>Choose from a wide range of services</p>
+            
+            <div class="popular_service_container">
+            <div class="popular_service_card">
+                    <img src="https://images.unsplash.com/photo-1655634584250-9e4650ed4170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="ai artist" class="popular_service_bg">
+                    <div class="popular_service_card_content">
+                        <h4>Hire AI talent</h4>
+                        <h2>AI Artist</h2>
+                    </div>
+                </div>
+
+                <div class="popular_service_card">
+                    <img src="https://images.unsplash.com/photo-1655634584250-9e4650ed4170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="ai artist" class="popular_service_bg">
+                    <div class="popular_service_card_content">
+                        <h4>Hire AI talent</h4>
+                        <h2>AI Artist</h2>
+                    </div>
+                </div>
+
+                <div class="popular_service_card">
+                    <img src="https://images.unsplash.com/photo-1655634584250-9e4650ed4170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="ai artist" class="popular_service_bg">
+                    <div class="popular_service_card_content">
+                        <h4>Hire AI talent</h4>
+                        <h2>AI Artist</h2>
+                    </div>
+                </div>
+
+                <div class="popular_service_card">
+                    <img src="https://images.unsplash.com/photo-1655634584250-9e4650ed4170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="ai artist" class="popular_service_bg">
+                    <div class="popular_service_card_content">
+                        <h4>Hire AI talent</h4>
+                        <h2>AI Artist</h2>
+                    </div>
+                </div>
+
+                <div class="popular_service_card">
+                    <img src="https://images.unsplash.com/photo-1655634584250-9e4650ed4170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="ai artist" class="popular_service_bg">
+                    <div class="popular_service_card_content">
+                        <h4>Hire AI talent</h4>
+                        <h2>AI Artist</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="referral_container">
+            <div class="referral_content">
+                <h2>Refer a friend</h2>
+                <p>Refer a friend and get 10% off on your next order</p>
+
+                <button class="btn">Refer now</button>
+            </div>
+            <div class="referral_img_container">
+                <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_870,dpr_1.0/v1/attachments/generic_asset/asset/d9c17ceebda44764b591a8074a898e63-1599597624757/business-desktop-870-x1.png" alt="" width="90%">
+            </div>
+        </div>
+
+        <?php include 'chatbot.php' ?>
 
 <script src="./js/home.js"></script>
 </body>
