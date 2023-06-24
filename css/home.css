@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.home_bg {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  background-image: url(../assets/homebg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home_bg_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.16),
+    rgba(0, 0, 0, 0.562)
+  );
+}
+
+.home_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home_content h2 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  text-shadow: 4px 4px 8px #00000063;
+}
+
+.home_content p {
+  display: block;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.home_content form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.home_content form input {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid #fff;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none !important;
+}
+
+.home_content form button {
+  width: 20%;
+  height: 3rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#servicesDropdown {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+#servicesDropdown div {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* -------------- services ---------------- */
+
+.services_container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  top: -60px;
+  background-color: #ffffff;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 50px #00000028;
+}
+
+.service_card_container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.service_card {
+  width: 160px;
+  height: 140px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 2rem;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.service_card:hover {
+  box-shadow: 1px 1px 50px #00000062;
+}
+
+.services_container h2,
+p {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .home_bg {
+    height: 100vh;
+  }
+
+  .home_content {
+    top: 40%;
+    width: 80%;
+    top: 50%;
+  }
+
+  .home_content h2 {
+    font-size: 2rem;
+  }
+
+  .home_content p {
+    font-size: 1rem;
+  }
+
+  .home_content form {
+    flex-direction: column;
+  }
+
+  .home_content form input {
+    width: 80%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .home_content form button {
+    width: 80%;
+    border-radius: 0.5rem;
+  }
+
+  .services_container {
+    width: 100%;
+    top: 0;
+  }
+
+  .service_card {
+    width: 50%;
+    margin: 1rem 0;
+  }
+
+  .services_container h2 {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  .services_container p {
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+}
