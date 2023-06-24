@@ -16,7 +16,7 @@ body {
 
 .home_bg {
   position: relative;
-  height: 70vh;
+  height: 75vh;
   width: 100%;
   background-image: url(../assets/homebg.jpg);
   background-size: cover;
@@ -49,14 +49,15 @@ body {
   color: #fff;
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-weight: 800;
   text-shadow: 4px 4px 8px #00000063;
 }
 
 .home_content p {
+  display: block;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 300;
   margin-bottom: 1rem;
 }
@@ -102,4 +103,114 @@ body {
 #servicesDropdown div {
   padding: 1rem;
   cursor: pointer;
+}
+
+/* -------------- services ---------------- */
+
+.services_container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  top: -60px;
+  background-color: #ffffff;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 50px #00000028;
+}
+
+.service_card_container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.service_card {
+  width: 160px;
+  height: 140px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 2rem;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.service_card:hover {
+  box-shadow: 1px 1px 50px #00000062;
+}
+
+.services_container h2,
+p {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .home_bg {
+    height: 100vh;
+  }
+
+  .home_content {
+    top: 40%;
+    width: 80%;
+    top: 50%;
+  }
+
+  .home_content h2 {
+    font-size: 2rem;
+  }
+
+  .home_content p {
+    font-size: 1rem;
+  }
+
+  .home_content form {
+    flex-direction: column;
+  }
+
+  .home_content form input {
+    width: 80%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .home_content form button {
+    width: 80%;
+    border-radius: 0.5rem;
+  }
+
+  .services_container {
+    width: 100%;
+    top: 0;
+  }
+
+  .service_card {
+    width: 50%;
+    margin: 1rem 0;
+  }
+
+  .services_container h2 {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  .services_container p {
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
 }
