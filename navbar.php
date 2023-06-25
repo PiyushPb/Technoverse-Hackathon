@@ -28,7 +28,7 @@ if ($isLoggedIn) {
             <span class="fas fa-bars"></span>
         </div>
         <div class="logo">
-            CodingNepal
+            UrbanTasker
         </div>
         <div class="nav-items">
             <li><a href="#">Home</a></li>

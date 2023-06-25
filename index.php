@@ -37,7 +37,7 @@
 
             <div class="service_card">
             <div class="service_card_img">
-                <img src="https://img.icons8.com/?size=512&id=e0lg1cVldtzN&format=png" alt="plumbing">
+                <img src="https://img.icons8.com/?size=512&id=e0lg1cVldtzN&format=png" alt="plumbing" width="100px">
             </div>
             <div class="service_card_content">
                 <h3>Plumbing</h3>
@@ -46,7 +46,7 @@
 
             <div class="service_card">
             <div class="service_card_img">
-                <img src="https://img.icons8.com/?size=512&id=e0lg1cVldtzN&format=png" alt="plumbing">
+                <img src="https://img.icons8.com/?size=512&id=e0lg1cVldtzN&format=png" alt="plumbing" width="100px">
             </div>
             <div class="service_card_content">
                 <h3>IT Support</h3>
@@ -55,7 +55,7 @@
 
             <div class="service_card">
             <div class="service_card_img">
-                <img src="https://img.icons8.com/?size=512&id=YEMMaJDfhuNq&format=png" alt="plumbing">
+                <img src="https://img.icons8.com/?size=512&id=YEMMaJDfhuNq&format=png" alt="plumbing" width="100px">
             </div>
             <div class="service_card_content">
                 <h3>Lawyer</h3>
@@ -64,7 +64,7 @@
 
             <div class="service_card">
             <div class="service_card_img">
-                <img src="https://img.icons8.com/?size=512&id=HXbUbBAE8GrT&format=png" alt="plumbing">
+                <img src="https://img.icons8.com/?size=512&id=HXbUbBAE8GrT&format=png" alt="plumbing" width="100px">
             </div>
             <div class="service_card_content">
                 <h3>Doctor</h3>
