@@ -120,6 +120,7 @@ nav .cancel-icon,
 nav .search-icon{
   display: none;
 }
+
 @media (max-width: 1245px) {
   nav{
     padding: 0 50px;

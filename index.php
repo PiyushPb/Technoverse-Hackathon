@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <?php include 'navbar.html';?>
+    <?php include 'navbar.php';?>
         <div class="home_bg">
             <div class="home_bg_overlay"></div>
             <div class="home_content">
@@ -160,6 +160,7 @@
         </div>
 
         <?php include 'chatbot.php' ?>
+        <?php include 'footer.html' ?>
 
 <script src="./js/home.js"></script>
 </body>
