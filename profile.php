@@ -1,24 +1,18 @@
 <?php
-// Start the session
 session_start();
 
-// Check if user is logged in
 if (!isset($_SESSION['isLoggedIn']) || $_SESSION['isLoggedIn'] !== true) {
-    // Redirect to login page if user is not logged in
     header("Location: login.php");
     exit();
 }
 include 'conn.php';
 
-// Get the user ID from the session
 $user_id = $_SESSION['id'];
 
-// Retrieve user data from the database
 $sql = "SELECT * FROM users WHERE id = '$user_id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Fetch user data
     $row = $result->fetch_assoc();
     $id = $row['id'];
     $name = $row['name'];
@@ -27,30 +21,26 @@ if ($result->num_rows > 0) {
     $referral = $row['referral'];
     $friends_referral = $row['friends_referral'];
 } else {
-    // User not found in the database
     echo "User not found.";
     exit();
 }
 
-// Handle referral update
+
 if (isset($_POST['update_referral'])) {
     $new_referral = $_POST['referral'];
 
-    // Check if the new referral is different from the current referral and not the same as the user's own referral
     if ($new_referral != $friends_referral && $new_referral != $referral) {
-        // Check if the referral exists in the database
+ 
         $referral_sql = "SELECT * FROM users WHERE referral = '$new_referral'";
         $referral_result = $conn->query($referral_sql);
 
         if ($referral_result->num_rows > 0) {
-            // Update the friends_referral in the database
+            
             $update_sql = "UPDATE users SET friends_referral = '$new_referral' WHERE id = '$user_id'";
             $conn->query($update_sql);
 
-            // Disable referral input field after updating
             $referral_disabled = true;
         } else {
-            // Invalid referral code
             echo "Invalid referral code.";
         }
     }
@@ -145,6 +135,5 @@ $referral_code = $friends_referral ?: "No referral code available";
 </html>
 
 <?php
-// Close the database connection
 $conn->close();
 ?>

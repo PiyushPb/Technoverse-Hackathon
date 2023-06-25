@@ -2,7 +2,6 @@
 
 $ticketData = json_decode(file_get_contents("php://input"), true);
 
-// Connect to the MySQL database
 $servername = "localhost";
 $username = "root";
 $password = "";

@@ -21,9 +21,9 @@ if (isset($_POST['login'])) {
         if ($pass_decode) {
             $_SESSION['username'] = $email_pass['name'];
             $_SESSION['isLoggedIn'] = True;
-            $_SESSION['id'] = $email_pass['id']; // Add this line to store the uid in the session
+            $_SESSION['id'] = $email_pass['id'];
         
-            header("Location: index.php"); // Redirect to index.php or any other page
+            header("Location: index.php"); 
             exit();
         
         } else {
