@@ -44,6 +44,9 @@ Open your web browser and visit the website URL to access the home services webs
 ### Er Diagram ###
 ![picture alt](https://i.ibb.co/CWNrBBp/Whats-App-Image-2023-06-25-at-11-05-43.jpg)
 
+### Er Diagram ###
+![picture alt](https://i.ibb.co/BBVT0nQ/tempsnip.png)
+
 # Future Enhancements
 Integration of payment gateway
 Real-time chat between users and service providers
