@@ -28,12 +28,12 @@ if ($isLoggedIn) {
             <span class="fas fa-bars"></span>
         </div>
         <div class="logo">
-            CodingNepal
+            UrbanTasker
         </div>
         <div class="nav-items">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="services.php">Services</a></li>
             <?php if ($isLoggedIn): ?>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="logout.php" class="logout" style="color : #ff8181;">Logout</a></li>

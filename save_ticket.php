@@ -22,7 +22,8 @@ $service = $ticketData["Please select a service:"];
 $sql = "INSERT INTO tickets (name, email, phone, gender, service) VALUES ('$name', '$email', '$phone', '$gender', '$service')";
 
 if ($conn->query($sql) === true) {
-    echo "Ticket created successfully!";
+    $ticketId = $conn->insert_id; // Retrieve the last inserted ID
+    echo "Ticket created successfully! Ticket ID: " . $ticketId;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
