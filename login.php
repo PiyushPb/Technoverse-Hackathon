@@ -1,3 +1,41 @@
+<?php
+session_start(); // Start the session
+
+include 'conn.php';
+
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $email_search = "SELECT * FROM users WHERE email = '$email'";
+    $query = mysqli_query($conn, $email_search);
+
+    $email_count = mysqli_num_rows($query);
+
+    if ($email_count) {
+        $email_pass = mysqli_fetch_assoc($query);
+        $db_pass = $email_pass['password'];
+
+        $pass_decode = password_verify($password, $db_pass);
+
+        if ($pass_decode) {
+            $_SESSION['username'] = $email_pass['name'];
+            $_SESSION['isLoggedIn'] = True;
+            $_SESSION['id'] = $email_pass['id']; // Add this line to store the uid in the session
+        
+            header("Location: index.php"); // Redirect to index.php or any other page
+            exit();
+        
+        } else {
+            echo "<script>alert('Incorrect password')</script>";
+        }
+    } else {
+        echo "<script>alert('Invalid email')</script>";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,39 +98,3 @@
     
 </body>
 </html>
-
-<?php 
-    include 'conn.php';
-
-    if(isset($_POST['login'])){
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        $email_search = "select * from users where email = '$email'";
-        $query = mysqli_query($conn, $email_search);
-
-        $email_count = mysqli_num_rows($query);
-
-        if($email_count){
-            $email_pass = mysqli_fetch_assoc($query);
-
-            $db_pass = $email_pass['password'];
-
-            $_SESSION['username'] = $email_pass['name'];
-
-            $pass_decode = password_verify($password, $db_pass);
-
-            if($pass_decode){
-                ?>
-                <script>
-                    location.replace("index.php");
-                </script>
-                <?php
-            }else{
-                echo "<script>alert('Incorrect password')</script>";
-            }
-        }else{
-            echo "<script>alert('Invalid email')</script>";
-        }
-    }
-?>

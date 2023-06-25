@@ -66,6 +66,18 @@
 </html>
 
 <?php
+include 'conn.php';
+
+function generateReferralKey() {
+    $length = 10;
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $referralKey = '';
+    $charactersLength = strlen($characters);
+    for ($i = 0; $i < $length; $i++) {
+        $referralKey .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $referralKey;
+}
 
 if (isset($_POST['signup'])) {
     $name = $_POST['name'];
@@ -86,11 +98,15 @@ if (isset($_POST['signup'])) {
             echo "<script>alert('User email or phone number already registered')</script>";
         } else {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $referralKey = generateReferralKey();
 
-            $sql = "INSERT INTO users (name, email, phone_number, password) VALUES ('$name', '$email', '$phone_number', '$hashed_password')";
+            $sql = "INSERT INTO users (name, email, phone_number, password, referral) VALUES ('$name', '$email', '$phone_number', '$hashed_password', '$referralKey')";
+
 
             if ($conn->query($sql) === TRUE) {
-                echo "<script>alert('Data uploaded successfully')</script>";
+                echo "<script>alert('User registered successfully')</script>";
+                header("Location: login.php"); // Redirect to index.php or any other page
+                exit();
             } else {
                 echo "<script>alert('Error uploading data: " . $conn->error . "')</script>";
             }
@@ -98,4 +114,3 @@ if (isset($_POST['signup'])) {
     }
 }
 ?>
-
